@@ -1,19 +1,21 @@
 # Projektin nimi
 
-**Tekijä(t):** Kirjoita tähän oma nimesi / tekijöiden nimet
+**Tekijä(t):** Emil Salmenkylä & Eetu Pyykkö
 
 ## Projektisuunnitelma
 
 ### Projektin idea
 
-Kuvaile lyhyesti, mitä sovelluksesi tekee ja kenelle se on tarkoitettu.
+Projektimme idea on tehdä To do lista.
+Listan tarkoitus on, että kuka tahansa henkilö voi päivittää sinne
+tietyn viikonpäivän kohdalle suunnitellut menot, kuten tapahtumat, palautuksien Deadlinet tai mitä tahansa mieleen tulee tietyn päivän kohdalle, taivas vain rajana.
 
 ### Suunnitellut toiminnot
 
 Listaa vähintään kolme sovellukseesi suunniteltua toimintoa:
 
-- Toiminto 1
-- Toiminto 2
+- Nappia painamalla rivin lisäys viikonpäivän alle, johon voi syöttää tietoja
+- Nappia painamalla rivin poisto
 - Toiminto 3
 
 ### Rautalankamalli / luonnos
