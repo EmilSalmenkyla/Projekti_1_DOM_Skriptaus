@@ -16,7 +16,7 @@ Listaa vähintään kolme sovellukseesi suunniteltua toimintoa:
 
 - Nappia painamalla rivin lisäys viikonpäivän alle, johon voi syöttää tietoja
 - Nappia painamalla rivin poisto
-- Toiminto 3
+- Check mark ✅ "Ruksaus toiminto", jossa voi merkata tehdyt asiat valmiiksi
 
 ### Rautalankamalli / luonnos
 
@@ -34,9 +34,10 @@ Esimerkki kuvan lisäämisestä:
 
 ## Tietoja sovelluksesta
 
-**[Projektin nimi]** on verkkosovellus, joka ...
-
-Kuvaile lyhyesti sovelluksen tarkoitus ja tärkeimmät toiminnot.
+**[VIIKON TO-DO LISTA]** on verkkosovellus, jonka tarkoitus on
+helpottaa ihmisten viikolla tapahtuvien suunnitelmien hahmottamista.
+Jokaisen viikonpäivän alle voi nappia painamalla lisätä rivin ja kirjoittaa uusi
+suunniteltu tapahtuma, tekeminen tai ihan mitävään. Sen voi merkata valmiiksi tai poistaa kokonaan viereisillä painikkeilla. 
 
 ## Teknologiat
 
