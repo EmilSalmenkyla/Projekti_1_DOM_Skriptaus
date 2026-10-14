@@ -24,8 +24,7 @@ Lisää tähän kuva käsin piirtämästäsi tai digitaalisesti tehdystä sovell
 
 Esimerkki kuvan lisäämisestä:
 
-![Rautalankamalli](img/wireframe.png)
-![alt text](image.png)
+![Rautalankamalli TO-DO lista viikonpäiville](IMG/image.png)
 
 ## Verkkolinkit
 
