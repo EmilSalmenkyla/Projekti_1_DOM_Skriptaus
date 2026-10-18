@@ -1,4 +1,4 @@
-
+//Lisää uusi rivi taulukkoon nappia painamalla
 function addRow() {
     const tbody = document.getElementById('TaulukonRivit');
     
