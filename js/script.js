@@ -36,7 +36,7 @@ document.getElementById('TaulukonRivit').addEventListener('click', function(even
         if (td.children.length === 0) {
             td.classList.remove('cell-placeholder');
 
-            // Lomake solussa.
+            // Lomake solussa
             td.innerHTML = `
                 <form>
                     <input
@@ -56,7 +56,7 @@ document.getElementById('TaulukonRivit').addEventListener('click', function(even
 
             kentta.focus();
 
-            // Poista tehtävä
+            // Peruuta tehtävän lisäys
             lomake.querySelector('.peruuta').addEventListener('click', function() {
                 td.textContent = 'Kirjoita tähän...';
                 td.classList.add('cell-placeholder');
