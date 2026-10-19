@@ -18,6 +18,11 @@ function addRow() {
     tbody.insertBefore(newRow, buttonRow);
 }
 
+
+const uusiRiviPainike = document.querySelector('#uusi-rivi-painike');
+uusiRiviPainike.addEventListener('click', addRow);
+
+
 document.querySelectorAll('#TaulukonRivit tr:not(.uusi-rivi) td').forEach(function(solu) {
     if (solu.cellIndex !== 0 && solu.innerHTML.trim() === '') {
         solu.textContent = 'Kirjoita tähän...';
@@ -66,6 +71,10 @@ document.getElementById('TaulukonRivit').addEventListener('click', function(even
             lomake.addEventListener('submit', function(e) {
                 e.preventDefault();
 
+                kentta.classList.remove('virhe');
+                kentta.removeAttribute('aria-invalid');
+                virheviesti.textContent = '';
+
                 const teksti = kentta.value.trim();
 
                 if (teksti.length < 3) {
@@ -91,19 +100,16 @@ document.getElementById('TaulukonRivit').addEventListener('click', function(even
 
                 const valmisNappi = document.createElement('button');
                 valmisNappi.textContent = '✅';
-                valmisNappi.onclick = function(e) {
-                    e.stopPropagation();
+                valmisNappi.addEventListener('click', function() {
                     tekstiSpan.classList.toggle('valmis');
-                };
+                });
 
                 const poistoNappi = document.createElement('button');
                 poistoNappi.textContent = '❌';
-                poistoNappi.onclick = function(e) {
-                    e.stopPropagation();
-                    tehtavaDiv.remove();
+                poistoNappi.addEventListener('click', function() {
                     td.textContent = 'Kirjoita tähän...';
                     td.classList.add('cell-placeholder');
-                };
+                });
 
                 napitDiv.appendChild(valmisNappi);
                 napitDiv.appendChild(poistoNappi);
@@ -114,3 +120,4 @@ document.getElementById('TaulukonRivit').addEventListener('click', function(even
         }
     }
 });
+

@@ -31,3 +31,12 @@
     background: none;
     cursor: pointer;
 }
+
+#Taulukko input.virhe {
+    border: 2px solid #c62828;
+}
+
+.virheviesti {
+    color: #c62828;
+    margin-top: 6px;
+}
