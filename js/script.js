@@ -1,54 +1,63 @@
-// Lisää uusi rivi taulukkoon nappia painamalla
+//Tunniste tekstikentille 
+let lomakeNumero = 0;
+
+//Solut viikonpäiville + reuna sarake .
 function addRow() {
     const tbody = document.getElementById('TaulukonRivit');
-    const buttonRow = document.querySelector('.uusi-rivi');
     const newRow = document.createElement('tr');
 
     for (let i = 0; i < 8; i++) {
         const newCell = document.createElement('td');
 
+        //Tyhjä ensimmäinen sarake
         if (i !== 0) {
-            newCell.textContent = 'Kirjoita tähän...';
-            newCell.classList.add('cell-placeholder');
+            naytaTyhjaSolu(newCell);
         }
 
         newRow.appendChild(newCell);
     }
 
-    tbody.insertBefore(newRow, buttonRow);
+    tbody.appendChild(newRow);
 }
 
+//Kirjoituspainike tyhjässä solussa
+function naytaTyhjaSolu(td) {
+    td.innerHTML = '';
+
+    const kirjoitaNappi = document.createElement('button');
+    kirjoitaNappi.type = 'button';
+    kirjoitaNappi.textContent = 'Kirjoita tähän...';
+    kirjoitaNappi.classList.add('kirjoita-nappi');
+
+    kirjoitaNappi.addEventListener('click', function() {
+        avaaLomake(td);
+    });
+
+    td.appendChild(kirjoitaNappi);
+}
 
 const uusiRiviPainike = document.querySelector('#uusi-rivi-painike');
 uusiRiviPainike.addEventListener('click', addRow);
 
 
-document.querySelectorAll('#TaulukonRivit tr:not(.uusi-rivi) td').forEach(function(solu) {
-    if (solu.cellIndex !== 0 && solu.innerHTML.trim() === '') {
-        solu.textContent = 'Kirjoita tähän...';
-        solu.classList.add('cell-placeholder');
-    }
-});
+//Rivi sivun avautuessa
+addRow();
 
-document.getElementById('TaulukonRivit').addEventListener('click', function(event) {
-    const td = event.target;
+//Lomakkeen avaus soluun, jonka painiketta klikattiin.
+function avaaLomake(td) {
+    lomakeNumero = lomakeNumero + 1;
 
-    if (
-        td.tagName === 'TD' &&
-        td.cellIndex !== 0 &&
-        !td.parentElement.classList.contains('uusi-rivi')
-    ) {
-        if (td.children.length === 0) {
-            td.classList.remove('cell-placeholder');
-
-            // Lomake solussa
+            //Lomake solussa
             td.innerHTML = `
                 <form>
+                    <label for="tehtava-${lomakeNumero}">Tehtävä:</label>
+
                     <input
+                        id="tehtava-${lomakeNumero}"
                         type="text"
                         placeholder="Kirjoita tähän..."
-                        aria-label="Tehtävä"
                     >
+
                     <button type="submit">Lisää</button>
                     <button type="button" class="peruuta">Peruuta</button>
                     <p class="virheviesti" role="alert"></p>
@@ -61,18 +70,16 @@ document.getElementById('TaulukonRivit').addEventListener('click', function(even
 
             kentta.focus();
 
-            // Peruuta tehtävän lisäys
+            //Peruuta tehtävän lisäys
             lomake.querySelector('.peruuta').addEventListener('click', function() {
-                td.textContent = 'Kirjoita tähän...';
-                td.classList.add('cell-placeholder');
+                naytaTyhjaSolu(td);
             });
 
-            // Tallenna tehtävä
+            //Tallenna tehtävä
             lomake.addEventListener('submit', function(e) {
                 e.preventDefault();
 
                 kentta.classList.remove('virhe');
-                kentta.removeAttribute('aria-invalid');
                 virheviesti.textContent = '';
 
                 const teksti = kentta.value.trim();
@@ -80,13 +87,11 @@ document.getElementById('TaulukonRivit').addEventListener('click', function(even
                 if (teksti.length < 3) {
                     virheviesti.textContent = 'Kirjoita vähintään 3 merkkiä.';
                     kentta.classList.add('virhe');
-                    kentta.setAttribute('aria-invalid', 'true');
                     kentta.focus();
                     return;
                 }
 
                 td.innerHTML = '';
-                td.classList.remove('cell-placeholder');
 
                 const tehtavaDiv = document.createElement('div');
                 tehtavaDiv.classList.add('tehtava');
@@ -107,8 +112,7 @@ document.getElementById('TaulukonRivit').addEventListener('click', function(even
                 const poistoNappi = document.createElement('button');
                 poistoNappi.textContent = '❌';
                 poistoNappi.addEventListener('click', function() {
-                    td.textContent = 'Kirjoita tähän...';
-                    td.classList.add('cell-placeholder');
+                    naytaTyhjaSolu(td);
                 });
 
                 napitDiv.appendChild(valmisNappi);
@@ -116,8 +120,6 @@ document.getElementById('TaulukonRivit').addEventListener('click', function(even
                 tehtavaDiv.appendChild(tekstiSpan);
                 tehtavaDiv.appendChild(napitDiv);
                 td.appendChild(tehtavaDiv);
-            });
-        }
-    }
-});
+    });
+}
 

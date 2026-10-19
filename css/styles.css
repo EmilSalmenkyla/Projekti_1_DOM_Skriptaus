@@ -1,5 +1,10 @@
-#TaulukonRivit td.cell-placeholder {
-    color: #999;
+.kirjoita-nappi {
+    border: none;
+    background: none;
+    color: #666;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
 }
 
 #Taulukko {
@@ -39,4 +44,14 @@
 .virheviesti {
     color: #c62828;
     margin-top: 6px;
+}
+
+#Taulukko input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 6px;
+}
+
+#Taulukko .reuna-sarake {
+    width: 120px;
 }
