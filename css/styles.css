@@ -1,0 +1,33 @@
+#TaulukonRivit td.cell-placeholder {
+    color: #999;
+}
+
+#Taulukko {
+    border-collapse: collapse;
+}
+
+#Taulukko th,
+#Taulukko td {
+    border: 1px solid #dee2e6;
+}
+
+.tehtava {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tehtava-teksti {
+    color: black;
+}
+
+.tehtava-teksti.valmis {
+    color: #888;
+    text-decoration: line-through;
+}
+
+.tehtava-napit button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
