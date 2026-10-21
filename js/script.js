@@ -232,5 +232,15 @@ function lataaTehtavat() {
     }
 }
 
-// Palautetaan tallennetut tiedot tai luodaan ensimmäinen rivi sivun avautuessa
-lataaTehtavat();
+// Taulukon resetointi
+const tyhjennaPainike = document.querySelector('#tyhjenna-painike');
+
+tyhjennaPainike.addEventListener('click', function() {
+    localStorage.removeItem('projekti1ViikonTodo');
+
+    const tbody = document.getElementById('TaulukonRivit');
+    tbody.innerHTML = '';
+    addRow();
+
+    lataaTehtavat();
+});
