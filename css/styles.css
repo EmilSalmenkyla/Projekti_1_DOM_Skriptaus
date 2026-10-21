@@ -24,6 +24,12 @@ p.intro {
 #Taulukko th,
 #Taulukko td {
     border: 1px solid #dee2e6;
+    padding: 12px;
+}
+
+#Taulukko th {
+    background-color: #b7b7b7;
+    color: #0a0a0a;
 }
 
 .tehtava {
