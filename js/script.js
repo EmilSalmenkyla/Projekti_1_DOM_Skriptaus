@@ -241,6 +241,6 @@ tyhjennaPainike.addEventListener('click', function() {
     const tbody = document.getElementById('TaulukonRivit');
     tbody.innerHTML = '';
     addRow();
-
-    lataaTehtavat();
 });
+    lataaTehtavat();
+

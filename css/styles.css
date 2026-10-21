@@ -1,3 +1,13 @@
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p.intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .kirjoita-nappi {
     border: none;
     background: none;
@@ -55,3 +65,4 @@
 #Taulukko .reuna-sarake {
     width: 120px;
 }
+
