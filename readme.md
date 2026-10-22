@@ -24,7 +24,7 @@ tietyn viikonpäivän kohdalle suunnitellut menot, kuten tapahtumat, palautuksie
 
 - **Julkaistu sovellus:** [GitHub Pages -osoite](https://emilsalmenkyla.github.io/Projekti_1_DOM_Skriptaus/)
 - **GitHub-repositorio:** [Repositorion linkki](https://github.com/EmilSalmenkyla/Projekti_1_DOM_Skriptaus)
-- **Projektin videoesittely:** [Lisää tähän videon osoite](https://example.com/)
+- **Projektin videoesittely:** [Videon osoite](https://laureauas-my.sharepoint.com/:v:/g/personal/eep00032_laurea_fi/IQBsmeZcPzzmT4_Z80CsaAT0ASPICtb8nqkPqN46_Ru8pHM?e=zEB3aO)
 
 ## Tietoja sovelluksesta
 
