@@ -22,7 +22,7 @@ tietyn viikonpäivän kohdalle suunnitellut menot, kuten tapahtumat, palautuksie
 
 ## Verkkolinkit
 
-- **Julkaistu sovellus:** [Lisää tähän GitHub Pages -osoite](https://yourusername.github.io/your-repository/)
+- **Julkaistu sovellus:** [GitHub Pages -osoite](https://emilsalmenkyla.github.io/Projekti_1_DOM_Skriptaus/)
 - **GitHub-repositorio:** [Repositorion linkki](https://github.com/EmilSalmenkyla/Projekti_1_DOM_Skriptaus)
 - **Projektin videoesittely:** [Lisää tähän videon osoite](https://example.com/)
 
@@ -63,10 +63,6 @@ TO-DO listaan voi laittaa ihan mitä tahansa: suunniteltu tapahtuma, tekeminen t
 
 ## Kuvakaappaukset
 
-Lisää tähän vähintään yksi kuvakaappaus toimivasta sovelluksestasi.
-
-Esimerkki kuvan lisäämisestä:
-
 ![Kuvakaappaus sovelluksesta](IMG/ValmisTuotos.png)
 
 ## Tunnetut virheet / puutteet
@@ -90,9 +86,17 @@ Pohdi työtäsi ja oppimisprosessiasi.
   - Saatiin toimiva TO-DO lista rakennettua taulukkoon
 
 - Mikä oli haastavaa?
+  - Projektin aloitus ja tuli ns. virheitä joiden takia jäätiin  hieman jumiin mutta trouble shootattiin tekoälyn kanssa ja korjasimme virheet
+ 
 - Mitä parantaisin, jos aikaa olisi enemmän?
+  - Emme parantaisi ehkä mitään muuta paitsi hieman tyylejä.
+
 - Mitä opin HTML:stä, CSS:stä, JavaScriptistä ja DOM-skriptauksesta?
+  - Opimme eri tekniikoita esim. javascriptin toiminnallisuus elementtejä joiden avulla sovellus sai toiminnallisuutta. Local storagen kautta saatiin se toimimaan niin että se tallentaa tiedot tilapäisesti.
+
 - Mikä jäi epäselväksi tai mistä haluaisin oppia lisää?
+  - Javascriptin käyttö tuntui vain pintakosketukselta sen toimintoihin. Olisi voinut olla jotain haastavampaa ja kompleksimpaa jolloin sen käyttö olisi vielä lisääntynyt syvemmin.
+
 - Oma arvio projektista: **8/10 pistettä**
 
 ## Lähteet ja kiitokset
